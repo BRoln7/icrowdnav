@@ -8,30 +8,30 @@
 <table style="width: 80%; margin: 0 auto; text-align: center;">
   <tr>
     <td>
-      <figure style="margin: 0;">
+      <div style="margin: 0;">
         <img src="./assets/social-bev.jpg" alt="cover" width="300"/>
-        <figcaption style="display: block; margin-top: 1px;">Social BEV</figcaption>
-      </figure>
+        <div style="margin-top: 5px;">iCrowdNav</div>
+      </div>
     </td>
     <td>
-      <figure style="margin: 0;">
+      <div style="margin: 0;">
         <img src="./assets/sfm_demo.gif" alt="social-force-model" width="300"/>
-        <figcaption style="display: block; margin-top: 1px;">Social Force Model</figcaption>
-      </figure>
+        <div style="margin-top: 5px;">Social Force Model</div>
+      </div>
     </td>
   </tr>
   <tr>
     <td>
-      <figure style="margin: 0;">
+      <div style="margin: 0;">
         <img src="./assets/icrowdnav-demo1.gif" alt="icrowdnav-demo1" width="300"/>
-        <figcaption style="display: block; margin-top: 1px;">Simulation Evaluation</figcaption>
-      </figure>
+        <div style="margin-top: 5px;">Simulation Evaluation</div>
+      </div>
     </td>
     <td>
-      <figure style="margin: 0;">
+      <div style="margin: 0;">
         <img src="./assets/icrowdnav-demo2.gif" alt="icrowdnav-demo2" width="300"/>
-        <figcaption style="display: block; margin-top: 1px;">Real-world Deployment</figcaption>
-      </figure>
+        <div style="margin-top: 5px;">Real-world Deployment</div>
+      </div>
     </td>
   </tr>
 </table>
