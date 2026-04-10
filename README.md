@@ -5,32 +5,32 @@
 > RA-L 2026<br>
 > [<u>site</u>](https://broln7.github.io/socialbev.io/), [<u>video</u>](https://www.youtube.com/watch?v=8q0dhAiWCEA&feature=youtu.be)
 
-<table>
+<table style="width: 80%; margin: 0 auto; text-align: center;">
   <tr>
     <td>
-      <figure style="margin: 0; text-align: center;">
+      <figure style="margin: 0;">
         <img src="./assets/social-bev.jpg" alt="cover" width="300"/>
-        <figcaption style="display: block; margin-top: 2px;"></figcaption>
+        <figcaption style="display: block; margin-top: 1px;">Social BEV</figcaption>
       </figure>
     </td>
     <td>
-      <figure style="margin: 0; text-align: center;">
+      <figure style="margin: 0;">
         <img src="./assets/sfm_demo.gif" alt="social-force-model" width="300"/>
-        <figcaption style="display: block; margin-top: 2px;">Social Force Model</figcaption>
+        <figcaption style="display: block; margin-top: 1px;">Social Force Model</figcaption>
       </figure>
     </td>
   </tr>
   <tr>
     <td>
-      <figure style="margin: 0; text-align: center;">
+      <figure style="margin: 0;">
         <img src="./assets/icrowdnav-demo1.gif" alt="icrowdnav-demo1" width="300"/>
-        <figcaption style="display: block; margin-top: 2px;">Simulation Evaluation</figcaption>
+        <figcaption style="display: block; margin-top: 1px;">Simulation Evaluation</figcaption>
       </figure>
     </td>
     <td>
-      <figure style="margin: 0; text-align: center;">
+      <figure style="margin: 0;">
         <img src="./assets/icrowdnav-demo2.gif" alt="icrowdnav-demo2" width="300"/>
-        <figcaption style="display: block; margin-top: 2px;">Real-world Deployment</figcaption>
+        <figcaption style="display: block; margin-top: 1px;">Real-world Deployment</figcaption>
       </figure>
     </td>
   </tr>
