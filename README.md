@@ -10,13 +10,13 @@
     <td>
       <figure style="margin: 0; text-align: center;">
         <img src="./assets/social-bev.jpg" alt="cover" width="300"/>
-        <figcaption style="display: block; margin-top: 5px;"></figcaption>
+        <figcaption style="display: block; margin-top: 2px;"></figcaption>
       </figure>
     </td>
     <td>
       <figure style="margin: 0; text-align: center;">
         <img src="./assets/sfm_demo.gif" alt="social-force-model" width="300"/>
-        <figcaption style="display: block; margin-top: 5px;">Social Force Model</figcaption>
+        <figcaption style="display: block; margin-top: 2px;">Social Force Model</figcaption>
       </figure>
     </td>
   </tr>
@@ -24,13 +24,13 @@
     <td>
       <figure style="margin: 0; text-align: center;">
         <img src="./assets/icrowdnav-demo1.gif" alt="icrowdnav-demo1" width="300"/>
-        <figcaption style="display: block; margin-top: 5px;">Simulation Evaluation</figcaption>
+        <figcaption style="display: block; margin-top: 2px;">Simulation Evaluation</figcaption>
       </figure>
     </td>
     <td>
       <figure style="margin: 0; text-align: center;">
         <img src="./assets/icrowdnav-demo2.gif" alt="icrowdnav-demo2" width="300"/>
-        <figcaption style="display: block; margin-top: 5px;">Real-world Deployment</figcaption>
+        <figcaption style="display: block; margin-top: 2px;">Real-world Deployment</figcaption>
       </figure>
     </td>
   </tr>
