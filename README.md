@@ -8,33 +8,35 @@
 <table>
   <tr>
     <td>
-      <figure style="margin: 0;">
+      <figure style="margin: 0; text-align: center;">
         <img src="./assets/social-bev.jpg" alt="cover" width="300"/>
-        <figcaption style="text-align: center;"></figcaption>
+        <figcaption style="display: block; margin-top: 5px;"></figcaption>
       </figure>
     </td>
     <td>
-      <figure style="margin: 0;">
+      <figure style="margin: 0; text-align: center;">
         <img src="./assets/sfm_demo.gif" alt="social-force-model" width="300"/>
-        <figcaption style="text-align: center;">Social Force Model</figcaption>
+        <figcaption style="display: block; margin-top: 5px;">Social Force Model</figcaption>
       </figure>
     </td>
   </tr>
   <tr>
     <td>
-      <figure style="margin: 0;">
+      <figure style="margin: 0; text-align: center;">
         <img src="./assets/icrowdnav-demo1.gif" alt="icrowdnav-demo1" width="300"/>
-        <figcaption style="text-align: center;">Simulation Evaluation</figcaption>
+        <figcaption style="display: block; margin-top: 5px;">Simulation Evaluation</figcaption>
       </figure>
     </td>
     <td>
-      <figure style="margin: 0;">
+      <figure style="margin: 0; text-align: center;">
         <img src="./assets/icrowdnav-demo2.gif" alt="icrowdnav-demo2" width="300"/>
-        <figcaption style="text-align: center;">Real-world Deployment</figcaption>
+        <figcaption style="display: block; margin-top: 5px;">Real-world Deployment</figcaption>
       </figure>
     </td>
   </tr>
 </table>
+
+
 <p align="center">
   <img src="https://img.shields.io/badge/IsaacSim-4.0.0-blue" alt="Isaac Sim 4.0.0"/>
   <img src="https://img.shields.io/badge/Pegasus_Simulator-Visit-blueviolet" alt="Pegasus Simulator"/>
