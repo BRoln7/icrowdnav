@@ -9,13 +9,13 @@
   <tr>
     <td>
       <figure style="margin: 0;">
-        <img src="./assets/social-bev.jpg" alt="cover" width="250"/>
+        <img src="./assets/social-bev.jpg" alt="cover" width="300"/>
         <figcaption style="text-align: center;"></figcaption>
       </figure>
     </td>
     <td>
       <figure style="margin: 0;">
-        <img src="./assets/sfm_demo.gif" alt="social-force-model" width="250"/>
+        <img src="./assets/sfm_demo.gif" alt="social-force-model" width="300"/>
         <figcaption style="text-align: center;">Social Force Model</figcaption>
       </figure>
     </td>
@@ -23,13 +23,13 @@
   <tr>
     <td>
       <figure style="margin: 0;">
-        <img src="./assets/icrowdnav-demo1.gif" alt="icrowdnav-demo1" width="250"/>
+        <img src="./assets/icrowdnav-demo1.gif" alt="icrowdnav-demo1" width="300"/>
         <figcaption style="text-align: center;">Simulation Evaluation</figcaption>
       </figure>
     </td>
     <td>
       <figure style="margin: 0;">
-        <img src="./assets/icrowdnav-demo2.gif" alt="icrowdnav-demo2" width="250"/>
+        <img src="./assets/icrowdnav-demo2.gif" alt="icrowdnav-demo2" width="300"/>
         <figcaption style="text-align: center;">Real-world Deployment</figcaption>
       </figure>
     </td>
