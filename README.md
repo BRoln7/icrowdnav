@@ -7,12 +7,32 @@
 
 <table>
   <tr>
-    <td><img src="./assets/social-bev.jpg" alt="cover" width="250"/></td>
-    <td><img src="./assets/sfm_demo.gif" alt="social-force-model" width="250"/></td>
+    <td>
+      <figure style="margin: 0;">
+        <img src="./assets/social-bev.jpg" alt="cover" width="400"/>
+        <figcaption style="text-align: center;"></figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure style="margin: 0;">
+        <img src="./assets/sfm_demo.gif" alt="social-force-model" width="400"/>
+        <figcaption style="text-align: center;">Social Force Model</figcaption>
+      </figure>
+    </td>
   </tr>
   <tr>
-    <td><img src="./assets/icrowdnav-demo1.gif" alt="icrowdnav-demo1" width="250"/></td>
-    <td><img src="./assets/icrowdnav-demo2.gif" alt="icrowdnav-demo2" width="250"/></td>
+    <td>
+      <figure style="margin: 0;">
+        <img src="./assets/icrowdnav-demo1.gif" alt="icrowdnav-demo1" width="400"/>
+        <figcaption style="text-align: center;">Simulation Evaluation</figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure style="margin: 0;">
+        <img src="./assets/icrowdnav-demo2.gif" alt="icrowdnav-demo2" width="400"/>
+        <figcaption style="text-align: center;">Real-world Deployment</figcaption>
+      </figure>
+    </td>
   </tr>
 </table>
 <p align="center">
@@ -21,9 +41,23 @@
   <img src="https://img.shields.io/badge/Python-3.8-green" alt="Python 3.8"/>
   <img src="https://img.shields.io/badge/Ubuntu-20.04-orange" alt="Ubuntu 20.04"/>
   <img src="https://img.shields.io/badge/ROS-1-brightgreen" alt="ROS 1"/>
-
+  <img src="https://img.shields.io/badge/stable--baselines3-2.0.0-yellow" alt="stable-baselines3 2.0.0"/>
 </p>
 
 ## TODO
 
 - [ ] Release codes of iCrowdNav.
+
+## Citation
+```
+@ARTICLE{11456337,
+        author={Bao, Han and Xia, Bingyi and Ye, Hanjing and Zhan, Yu and Cheng, Hao and Jia, Baozhi and Xu, Wenjun and Wang, Jiankun},
+        journal={IEEE Robotics and Automation Letters}, 
+        title={Learning Robot Visual Navigation in Crowds via Intention-Aware Scene Representations}, 
+        year={2026},
+        volume={11},
+        number={5},
+        pages={6186-6193},
+        keywords={Navigation;Robots;Feature extraction;Visualization;Pedestrians;Collision avoidance;Three-dimensional displays;Reliability;Cameras;Training;Human-aware motion planning;vision-based navigation;collision avoidance},
+        doi={10.1109/LRA.2026.3677748}}
+```
