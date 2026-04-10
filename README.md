@@ -9,13 +9,13 @@
   <tr>
     <td>
       <figure style="margin: 0;">
-        <img src="./assets/social-bev.jpg" alt="cover" width="400"/>
+        <img src="./assets/social-bev.jpg" alt="cover" width="250"/>
         <figcaption style="text-align: center;"></figcaption>
       </figure>
     </td>
     <td>
       <figure style="margin: 0;">
-        <img src="./assets/sfm_demo.gif" alt="social-force-model" width="400"/>
+        <img src="./assets/sfm_demo.gif" alt="social-force-model" width="250"/>
         <figcaption style="text-align: center;">Social Force Model</figcaption>
       </figure>
     </td>
@@ -23,13 +23,13 @@
   <tr>
     <td>
       <figure style="margin: 0;">
-        <img src="./assets/icrowdnav-demo1.gif" alt="icrowdnav-demo1" width="400"/>
+        <img src="./assets/icrowdnav-demo1.gif" alt="icrowdnav-demo1" width="250"/>
         <figcaption style="text-align: center;">Simulation Evaluation</figcaption>
       </figure>
     </td>
     <td>
       <figure style="margin: 0;">
-        <img src="./assets/icrowdnav-demo2.gif" alt="icrowdnav-demo2" width="400"/>
+        <img src="./assets/icrowdnav-demo2.gif" alt="icrowdnav-demo2" width="250"/>
         <figcaption style="text-align: center;">Real-world Deployment</figcaption>
       </figure>
     </td>
@@ -58,6 +58,5 @@
         volume={11},
         number={5},
         pages={6186-6193},
-        keywords={Navigation;Robots;Feature extraction;Visualization;Pedestrians;Collision avoidance;Three-dimensional displays;Reliability;Cameras;Training;Human-aware motion planning;vision-based navigation;collision avoidance},
         doi={10.1109/LRA.2026.3677748}}
 ```
