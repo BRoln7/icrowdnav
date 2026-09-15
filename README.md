@@ -1,49 +1,21 @@
 # iCrowdNav
 
-> <b>Learning Robot Visual Navigation in Crowds via Intention-Aware Scene Representations</b> <br>
-> Han Bao*, Bingyi Xia*, Hanjing Ye, Yu Zhan, Hao Cheng, Baozhi Jia, Wenjun Xu, Jiankun Wang <br>
-> IEEE Robotics and Automation Letters (RA-L), 2026<br>
-> [<u>project page</u>](https://broln7.github.io/socialbev.io/), [<u>video</u>](https://www.youtube.com/watch?v=8q0dhAiWCEA&feature=youtu.be), [<u>paper</u>](https://doi.org/10.1109/LRA.2026.3677748)
+> **Learning Robot Visual Navigation in Crowds via Intention-Aware Scene Representations**   
+>
+> Han Bao*, Bingyi Xia*, Hanjing Ye, Yu Zhan, Hao Cheng, Baozhi Jia, Wenjun Xu, Jiankun Wang   
+>
+> IEEE Robotics and Automation Letters (RA-L), 2026  
+>
+> ++[project page](https://broln7.github.io/socialbev.io/)++, ++[video](https://www.youtube.com/watch?v=8q0dhAiWCEA&feature=youtu.be)++, ++[paper](https://doi.org/10.1109/LRA.2026.3677748)++
 
-<table style="width: 80%; margin: 0 auto; text-align: center;">
-  <tr>
-    <td>
-      <div style="margin: 0;">
-        <img src="./assets/social-bev.jpg" alt="cover" width="300"/>
-        <div style="margin-top: 5px;">iCrowdNav</div>
-      </div>
-    </td>
-    <td>
-      <div style="margin: 0;">
-        <img src="./assets/sfm_demo.gif" alt="social-force-model" width="300"/>
-        <div style="margin-top: 5px;">Social Force Model</div>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <div style="margin: 0;">
-        <img src="./assets/icrowdnav-demo1.gif" alt="icrowdnav-demo1" width="300"/>
-        <div style="margin-top: 5px;">Simulation Evaluation</div>
-      </div>
-    </td>
-    <td>
-      <div style="margin: 0;">
-        <img src="./assets/icrowdnav-demo2.gif" alt="icrowdnav-demo2" width="300"/>
-        <div style="margin-top: 5px;">Real-world Deployment</div>
-      </div>
-    </td>
-  </tr>
-</table>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/IsaacSim-4.0.0-blue" alt="Isaac Sim 4.0.0"/>
-  <img src="https://img.shields.io/badge/Pegasus_Simulator-Visit-blueviolet" alt="Pegasus Simulator"/>
-  <img src="https://img.shields.io/badge/Python-3.8-green" alt="Python 3.8"/>
-  <img src="https://img.shields.io/badge/Ubuntu-20.04-orange" alt="Ubuntu 20.04"/>
-  <img src="https://img.shields.io/badge/ROS-Noetic-brightgreen" alt="ROS Noetic"/>
-  <img src="https://img.shields.io/badge/stable--baselines3-2.0.0-yellow" alt="stable-baselines3 2.0.0"/>
-</p>
+|                                                                        |                                                                        |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ![cover](./assets/social-bev.jpg)iCrowdNav                            | ![social-force-model](./assets/sfm_demo.gif)Social Force Model        |
+| ![icrowdnav-demo1](./assets/icrowdnav-demo1.gif)Simulation Evaluation | ![icrowdnav-demo2](./assets/icrowdnav-demo2.gif)Real-world Deployment |
+
+
+![Isaac Sim 4.0.0](https://img.shields.io/badge/IsaacSim-4.0.0-blue)![Pegasus Simulator](https://img.shields.io/badge/Pegasus_Simulator-Visit-blueviolet)![Python 3.8](https://img.shields.io/badge/Python-3.8-green)![Ubuntu 20.04](https://img.shields.io/badge/Ubuntu-20.04-orange)![ROS Noetic](https://img.shields.io/badge/ROS-Noetic-brightgreen)![stable-baselines3 2.0.0](https://img.shields.io/badge/stable--baselines3-2.0.0-yellow)
 
 ## Abstract
 
@@ -72,41 +44,13 @@ Search for **ROS Navigation** in the Isaac Sim documentation matching your versi
 
 ## System Overview
 
-```mermaid
-flowchart LR
-  subgraph sim [Isaac Sim or Gazebo]
-    Scene[Warehouse scene + robot]
-    Ped[Pedestrians]
-    Cam[RGB-D / LiDAR / TF]
-  end
-
-  subgraph ros [ROS 1]
-    SFM[sfm_ros]
-    Nav[map / AMCL / A*]
-    Env[SocBevEnv]
-  end
-
-  subgraph policy [DRL policy]
-    BEV[BEV encoder]
-    I2[I2Former]
-    PPO[PPO]
-  end
-
-  Ped -->|/isaacsim/persons_states| SFM
-  SFM -->|/sfm_cmd waypoints| Ped
-  Cam --> Env
-  Ped --> Env
-  Nav --> Env
-  Env --> BEV
-  Env --> I2
-  BEV --> PPO
-  I2 --> PPO
-  PPO -->|/cmd_vel| Scene
-```
+![](./assets/system_review.png)
 
 - **[Pegasus Simulator](https://pegasussimulator.github.io/PegasusSimulator/)** (Isaac Sim plugin) spawns and animates pedestrians. Each pedestrian tracks a waypoint from the social-force node.
 - **sfm_ros** computes Helbing-style social forces on the warehouse occupancy map and publishes `/sfm_cmd`.
 - **drl_policy** wraps sensors as `SocBevEnv`, builds intention-aware features, and outputs discrete `(v, ω)` commands.
+
+
 
 ## Repository Structure
 
@@ -151,6 +95,8 @@ catkin_make
 source devel/setup.bash
 export PYTHONPATH="$(rospack find drl_policy):${PYTHONPATH}"
 ```
+
+
 
 ### 2. Python dependencies
 
@@ -216,17 +162,21 @@ By default, training writes to `~/drl_logdir/policy_training/`. Evaluation loads
 
 The policy does not depend on a particular USD or Gazebo world. Match these topics:
 
-| Topic | Direction | Meaning |
-| --- | --- | --- |
-| `/rgb_left`, `/rgb_right` | Sim → policy | stereo RGB, 480×640 |
-| `/depth_left`, `/depth_right` | Sim → policy | stereo depth, 480×640 |
-| `/scan`, `/tf_pose`, `/odom`, `/map` | Sim / nav → policy | robot state |
-| `/cmd_vel` | policy → Sim | velocity command |
-| `/isaacsim/persons_states` | Sim → SFM / policy | pedestrian poses (`PoseArray`) |
-| `/sfm_cmd` | SFM → Sim | pedestrian target waypoints |
-| `/isaacsim/set_robot_state` | policy → Sim | reset robot pose |
-| `/isaacsim/isaacsim_error` | Sim → policy | pose error after reset (needs compensation) |
-| `/isaacsim_pose` | policy → SFM / AMCL | robot pose in map |
+
+| Topic                                | Direction           | Meaning                                     |
+| ------------------------------------ | ------------------- | ------------------------------------------- |
+| `/rgb_left`, `/rgb_right`            | Sim → policy        | stereo RGB, 480×640                         |
+| `/depth_left`, `/depth_right`        | Sim → policy        | stereo depth, 480×640                       |
+| `/scan`, `/tf_pose`, `/odom`, `/map` | Sim / nav → policy  | robot state                                 |
+| `/cmd_vel`                           | policy → Sim        | velocity command                            |
+| `/isaacsim/persons_states`           | Sim → SFM / policy  | pedestrian poses (`PoseArray`)              |
+| `/sfm_cmd`                           | SFM → Sim           | pedestrian target waypoints                 |
+| `/isaacsim/set_robot_state`          | policy → Sim        | reset robot pose                            |
+| `/isaacsim/isaacsim_error`           | Sim → policy        | pose error after reset (needs compensation) |
+| `/isaacsim_pose`                     | policy → SFM / AMCL | robot pose in map                           |
+
+
+
 
 ## Method Notes
 
@@ -235,11 +185,15 @@ The policy does not depend on a particular USD or Gazebo world. Match these topi
 - **Policy.** PPO (`stable-baselines3`) with a discrete action set: linear velocity `{0, 0.25, 0.5, 0.75, 1.0}` m/s × 21 angular-velocity bins.
 - **Pedestrians.** Social-force control in ROS; in Isaac Sim this is executed through Pegasus `PersonController`.
 
+
+
 ## Acknowledgements
 
 - [Pegasus Simulator](https://github.com/PegasusSimulator/PegasusSimulator) for the Isaac Sim people API.
 - NVIDIA Isaac Sim and Omniverse.
 - [stable-baselines3](https://github.com/DLR-RM/stable-baselines3) and [Ultralytics YOLO](https://github.com/ultralytics/ultralytics).
+
+
 
 ## License
 
@@ -258,3 +212,4 @@ This project is released under the [MIT License](LICENSE). Third-party component
         pages={6186-6193},
         doi={10.1109/LRA.2026.3677748}}
 ```
+
