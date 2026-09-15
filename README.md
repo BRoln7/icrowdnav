@@ -6,13 +6,13 @@
 >
 > IEEE Robotics and Automation Letters (RA-L), 2026  
 >
-> ++[project page](https://broln7.github.io/socialbev.io/)++, ++[video](https://www.youtube.com/watch?v=8q0dhAiWCEA&feature=youtu.be)++, ++[paper](https://doi.org/10.1109/LRA.2026.3677748)++
+> [project page](https://broln7.github.io/socialbev.io/), [video](https://www.youtube.com/watch?v=8q0dhAiWCEA&feature=youtu.be), [paper](https://doi.org/10.1109/LRA.2026.3677748)
 
 
 |                                                                        |                                                                        |
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| ![cover](./assets/social-bev.jpg)iCrowdNav                            | ![social-force-model](./assets/sfm_demo.gif)Social Force Model        |
-| ![icrowdnav-demo1](./assets/icrowdnav-demo1.gif)Simulation Evaluation | ![icrowdnav-demo2](./assets/icrowdnav-demo2.gif)Real-world Deployment |
+| ![cover](./assets/social-bev.jpg)iCrowdNav                            | ![social-force-model](./assets/sfm_demo.gif)Social Force Model        |
+| ![icrowdnav-demo1](./assets/icrowdnav-demo1.gif)Simulation Evaluation | ![icrowdnav-demo2](./assets/icrowdnav-demo2.gif)Real-world Deployment |
 
 
 ![Isaac Sim 4.0.0](https://img.shields.io/badge/IsaacSim-4.0.0-blue)![Pegasus Simulator](https://img.shields.io/badge/Pegasus_Simulator-Visit-blueviolet)![Python 3.8](https://img.shields.io/badge/Python-3.8-green)![Ubuntu 20.04](https://img.shields.io/badge/Ubuntu-20.04-orange)![ROS Noetic](https://img.shields.io/badge/ROS-Noetic-brightgreen)![stable-baselines3 2.0.0](https://img.shields.io/badge/stable--baselines3-2.0.0-yellow)
