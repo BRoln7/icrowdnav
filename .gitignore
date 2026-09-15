@@ -1,0 +1,40 @@
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# ROS / catkin
+build/
+devel/
+install/
+log/
+.catkin_workspace
+
+# Isaac Sim / Omniverse
+.thumbs/
+_isaac_sim
+*.dmp
+
+# Local logs and checkpoints
+drl_logdir/
+*.pt
+runs/
+logs/
+
+# NVIDIA / Isaac Sim scene assets are not redistributable here
+*.usd
+*.usda
+*.usdc
+**/.thumbs/
+
+# Nested git leftovers
+*.orig

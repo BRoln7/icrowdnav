@@ -1,0 +1,27 @@
+robot_prim: /World/layout/dingo
+stage_prim: /World/layout
+viewport_eye: [5.0, 9.0, 6.5]
+viewport_target: [0.0, 0.0, 0.0]
+reset_poses:
+  - [-3.0, 3.5, 0.0]
+pedestrians:
+  - name: person0
+    character: male_adult_construction_01_new
+    init_pos: [0.0, 2.0, 0.0]
+    init_yaw: 1.0
+  - name: person1
+    character: male_adult_construction_03
+    init_pos: [3.0, 3.0, 0.0]
+    init_yaw: 1.0
+  - name: person2
+    character: F_Medical_01
+    init_pos: [0.0, 5.0, 0.0]
+    init_yaw: 1.0
+  - name: person3
+    character: M_Medical_01
+    init_pos: [3.0, 5.0, 0.0]
+    init_yaw: 1.0
+  - name: person4
+    character: original_male_adult_construction_02
+    init_pos: [1.5, 7.0, 0.0]
+    init_yaw: 1.0

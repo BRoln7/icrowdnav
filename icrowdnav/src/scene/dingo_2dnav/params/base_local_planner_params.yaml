@@ -1,0 +1,15 @@
+base_local_planner: dwa_local_planner/DWAPlannerROS
+
+DWAPlannerROS:
+  max_vel_x: 1.0
+  min_vel_x: 0.1
+  max_vel_theta: 2.0
+  min_vel_theta: -2.0
+  acc_lim_x: 1.0
+  acc_lim_theta: 1.0
+  sim_time: 1.0
+  vx_samples: 20
+  vtheta_samples: 40
+  path_distance_bias: 32.0
+  goal_distance_bias: 20.0
+  occdist_scale: 0.02

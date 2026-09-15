@@ -1,0 +1,5 @@
+<launch>
+  <arg name="checkpoint" default="$(env HOME)/drl_logdir/policy_training/social-bev/rl_model_340000_steps.zip"/>
+  <node name="drl_eval" pkg="drl_policy" type="policy_inference.py" output="screen"
+        args="--checkpoint $(arg checkpoint)"/>
+</launch>

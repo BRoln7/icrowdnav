@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="dingo">
+  <!-- <joint name="joint_dingo-realsense_left_stereo_camera" type="fixed">
+    <origin xyz="4.0148844e+09 1.7500892e-02 4.6999998e-02" rpy="1.5707964 0. -1.5707964"/>
+    <parent link="dingo"/>
+    <child link="realsense_left_stereo_camera"/>
+  </joint>
+  <joint name="joint_dingo-realsense_right_stereo_camera" type="fixed">
+    <origin xyz="0.2889 -0.0325 0.047 " rpy="1.5707964 0. -1.5707964"/>
+    <parent link="dingo"/>
+    <child link="realsense_right_stereo_camera"/>
+  </joint> -->
+  <joint name="left_wheel_joint" type="continuous">
+    <origin xyz="0.0989838 0.2261616 0.0345 " rpy="0. 0. 1.5707964"/>
+    <parent link="base_link"/>
+    <child link="left_wheel_link"/>
+    <axis xyz="1. 0. 0."/>
+  </joint>
+  <joint name="right_wheel_joint" type="continuous">
+    <origin xyz="0.0989838 -0.2261616 0.0345 " rpy="0. 0. 1.5707964"/>
+    <parent link="base_link"/>
+    <child link="right_wheel_link"/>
+    <axis xyz="1. 0. 0."/>
+  </joint>
+  <link name="base_link">
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://dingo_description/urdf/meshes/mesh_0.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0.2889 0. 0.0470125" rpy="1.5707964 -0. 1.5707964"/>
+      <geometry>
+        <mesh filename="package://dingo_description/urdf/meshes/mesh_1.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0.09 0.05 0.114263" rpy="0. 0. 0."/>
+      <geometry>
+        <cylinder radius="0.003" length="0.1"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0.09 -0.05 0.114263" rpy="0. 0. 0."/>
+      <geometry>
+        <cylinder radius="0.003" length="0.1"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="-0.01 0.05 0.114263" rpy="0. 0. 0."/>
+      <geometry>
+        <cylinder radius="0.003" length="0.1"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="-0.01 -0.05 0.114263" rpy="0. 0. 0."/>
+      <geometry>
+        <cylinder radius="0.003" length="0.1"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0.04 0. 0.163263" rpy="0. 0. 0."/>
+      <geometry>
+        <box size="0.1 0.1 0.002"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0.04 0. 0.164263" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://dingo_description/urdf/meshes/mesh_7.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0.04 0. 0.164263" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://dingo_description/urdf/meshes/mesh_8.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0.04 0. 0.164263" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://dingo_description/urdf/meshes/mesh_9.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="-0.244 0. -0.00674" rpy="0. 0. 0."/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://dingo_description/urdf/meshes/body.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0.2846 0. 0.0470125" rpy="0. 0. 0."/>
+      <geometry>
+        <box size="0.02505 0.09 0.025 "/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0.04 0. 0.200113" rpy="0. 0. 0."/>
+      <geometry>
+        <cylinder radius="0.0516" length="0.0717"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://dingo_description/urdf/meshes/body.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.2846 0. 0.0470125" rpy="0. 0. 0."/>
+      <geometry>
+        <box size="0.02505 0.09 0.025 "/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.04 0. 0.200113" rpy="0. 0. 0."/>
+      <geometry>
+        <cylinder radius="0.0516" length="0.0717"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.244 0. -0.00674" rpy="0. 0. 0."/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_wheel_link">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.111"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. -1.5707964"/>
+      <geometry>
+        <mesh filename="package://dingo_description/urdf/meshes/left_wheel_link_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="1.5707964 0. -1.5707964"/>
+      <geometry>
+        <cylinder radius="0.049" length="0.02032"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="1.5707964 0. -1.5707964"/>
+      <geometry>
+        <cylinder radius="0.049" length="0.02032"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- <link name="realsense_left_stereo_camera"/>
+  <link name="realsense_right_stereo_camera"/> -->
+  <link name="right_wheel_link">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.111"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. -1.5707964"/>
+      <geometry>
+        <mesh filename="package://dingo_description/urdf/meshes/right_wheel_link_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="1.5707964 0. -1.5707964"/>
+      <geometry>
+        <cylinder radius="0.049" length="0.02032"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="1.5707964 0. -1.5707964"/>
+      <geometry>
+        <cylinder radius="0.049" length="0.02032"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

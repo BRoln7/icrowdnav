@@ -1,0 +1,5 @@
+<launch>
+
+  <node name="sfm" pkg="sfm_ros" type="main.py" output="screen"/>
+
+</launch>

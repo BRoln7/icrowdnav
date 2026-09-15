@@ -1,0 +1,5 @@
+<launch>
+  <arg name="log_dir" default="$(env HOME)/drl_logdir/policy_training"/>
+  <node name="drl_training" pkg="drl_policy" type="policy_train.py" output="screen"
+        args="--log-dir $(arg log_dir)"/>
+</launch>

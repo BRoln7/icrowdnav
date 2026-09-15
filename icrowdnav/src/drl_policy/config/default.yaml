@@ -1,0 +1,54 @@
+camera:
+  height: 480
+  width: 640
+  fx: 554.2562255859375
+  fy: 554.2562255859375
+  cx: 320.0
+  cy: 240.0
+  yaw_offset_deg: [30.0, -30.0]
+  left:
+    translation: [-0.05, 0.1, 0.5]
+    rpy_deg: [100.0, -58.0, 10.0]
+  right:
+    translation: [-0.05, -0.1, 0.5]
+    rpy_deg: [-100.0, -58.0, 170.0]
+  depth_crop: [280, 1000]
+
+bev:
+  receptive_field: 3
+  encoder_downsample: 16
+  encoder_out_channels: 64
+  depth_min: 0.30
+  depth_max: 6.10
+  depth_input_max: 25.0
+  depth_nums: 58
+  depth_input_nums: 247
+  x_bound: [0.0, 6.0, 0.06]
+  y_bound: [-4.8, 4.8, 0.08]
+  z_bound: [-10.0, 10.0, 20.0]
+  ground_z_min: 0.1
+  blur_sigma: 1.0
+
+env:
+  agent_nums: 6
+  goal_radius: 0.55
+  robot_radius: 0.3
+  person_radius: 0.3
+  max_steps: 512
+  max_collisions: 2
+  control_hz: 30
+  linear_velocities: [0.0, 0.25, 0.50, 0.75, 1.0]
+  angular_velocity_min: -2.0
+  angular_velocity_max: 2.0
+  angular_velocity_bins: 21
+  test_episodes: 12
+  default_goal: [-3.0, 3.0]
+  fov_deg: 130.0
+  collision_pause_s: 5.0
+  yolo_weights: yolo11n-pose.pt
+  reward:
+    vel: 1.0
+    arrival: 10.0
+    scan: 1.0
+    smooth: 0.10
+    collision: -5.0

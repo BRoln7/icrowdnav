@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>sfm_ros</name>
+  <version>0.1.0</version>
+  <description>Social-force pedestrian controller for iCrowdNav.</description>
+  <maintainer email="hill_bao77@outlook.com">iCrowdNav authors</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>rospy</depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+</package>
