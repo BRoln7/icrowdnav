@@ -9,10 +9,28 @@
 > [project page](https://broln7.github.io/socialbev.io/), [video](https://www.youtube.com/watch?v=8q0dhAiWCEA&feature=youtu.be), [paper](https://doi.org/10.1109/LRA.2026.3677748)
 
 
-|                                                             |                                                             |
-| ----------------------------------------------------------- | ----------------------------------------------------------- |
-| ![](./assets/social-bev.jpg) **iCrowdNav**                  | ![](./assets/sfm_demo.gif) **Social Force Model**           |
-| ![](./assets/icrowdnav-demo1.gif) **Simulation Evaluation** | ![](./assets/icrowdnav-demo2.gif) **Real-world Deployment** |
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./assets/social-bev.jpg" width="360"><br>
+      <b>iCrowdNav</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="./assets/sfm_demo.gif" width="360"><br>
+      <b>Social Force Model</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./assets/icrowdnav-demo1.gif" width="360"><br>
+      <b>Simulation Evaluation</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="./assets/icrowdnav-demo2.gif" width="360"><br>
+      <b>Real-world Deployment</b>
+    </td>
+  </tr>
+</table>
 
 
 ![Isaac Sim 4.0.0](https://img.shields.io/badge/IsaacSim-4.0.0-blue)![Pegasus Simulator](https://img.shields.io/badge/Pegasus_Simulator-Visit-blueviolet)![Python 3.8](https://img.shields.io/badge/Python-3.8-green)![Ubuntu 20.04](https://img.shields.io/badge/Ubuntu-20.04-orange)![ROS Noetic](https://img.shields.io/badge/ROS-Noetic-brightgreen)![stable-baselines3 2.0.0](https://img.shields.io/badge/stable--baselines3-2.0.0-yellow)
