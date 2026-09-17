@@ -248,14 +248,6 @@ class SocBevEnv(Env):
         cmd_vel.linear.x = linear_vel
         cmd_vel.angular.z = angular_vel
 
-        if not self.train_mode and self.depth_l_cur is not None and self.depth_r_cur is not None:
-            crop_lo, crop_hi = self.depth_crop
-            depth_cur = np.concatenate((self.depth_l_cur, self.depth_r_cur), axis=-1)[:, crop_lo:crop_hi]
-            if depth_cur.min() <= 2.0 * self.ROBOT_RADIUS:
-                cmd_vel.linear.x = 0.0
-                min_index = np.argmin(depth_cur) % depth_cur.shape[1]
-                cmd_vel.angular.z = -1.5 if min_index < 0.5 * depth_cur.shape[1] else 1.5
-
         self.vel_cmd_pub.publish(cmd_vel)
 
     def get_observation(self):
